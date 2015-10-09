@@ -41,7 +41,14 @@
 		if($car_plate_error == "" && $color_error == ""){
 				
 				echo "Plate nr ".$car_plate." color is ".$color;
-				createCarPlate($car_plate, $color);
+				//msg = message
+				$msg = createCarPlate($car_plate, $color);
+				if($msg != ""){
+					//salvestamine õnnestus, teen väljad tühjaks
+					$car_plate = "";
+					$color = "";
+					echo $msg;
+				}
 		}
 	}
 	function test_input($data) {
