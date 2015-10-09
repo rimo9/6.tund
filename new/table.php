@@ -1,4 +1,6 @@
 <?php
-//table
-
+	//table
+	require_once("functions.php");
+	getCarData();
+	
 ?>
